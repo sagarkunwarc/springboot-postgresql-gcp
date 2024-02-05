@@ -38,11 +38,11 @@ public class MotorVehicleReportController {
 
     @GetMapping("/allVehicles")
     public Iterable<Vehicle> findAllVehicles(){
-        return this.reportService.findAll();
+        return reportService.findAll();
     }
 
     @DeleteMapping("/{id}")
     public Vehicle removeVehicle(@PathVariable Long id){
-        return this.reportService.deleteVehicleById(id);
+        return reportService.deleteVehicleById(id);
     }
 }
