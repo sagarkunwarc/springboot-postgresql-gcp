@@ -12,7 +12,7 @@ RUN mvn package -DskipTests
 FROM eclipse-temurin:17-jre-jammy
 
 # Copy the jar to the production image from the builder stage.
-COPY --from=builder /app/target/motorvehiclereport-0.0.1-SNAPSHOT.jar motorvehiclereport.jar
+COPY --from=builder /app/target/motorvehiclereport-*.jar /motorvehiclereport.jar
 
 
 # Run the web service on container startup.
